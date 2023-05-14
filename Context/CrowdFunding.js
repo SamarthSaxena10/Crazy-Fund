@@ -1,10 +1,14 @@
-import React, { useState, useEffect, use } from "react";
+import React, { useState, useEffect } from "react";
 import Web3Modal from "web3modal";
 import { ethers } from "ethers";
+//Internal Import
 import { CONTRACT_ABI, CONTRACT_ADDRESS } from "./contants";
 
+// fetching Smart Contract
 const fetchContract = (signOrProvider) =>
   new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signOrProvider);
+
+export const CrowdFundingContext = React.createContext();
 
 export const CrowdFundingProvider = ({ children }) => {
   const titledata = "Crowd Funding Contract";
