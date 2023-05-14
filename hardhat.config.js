@@ -1,20 +1,6 @@
+require("@nomicfoundation/hardhat-toolbox");
+
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  solidity: {
-    version: "0.8.9",
-    defaultNetwork: "sphinx",
-    networks: {
-      hardhat: {},
-      sphinx: {
-        url: "https://sphinx.shardeum.org/",
-        accounts: [`0x${process.env.PRIVATE_KEY}`],
-      },
-    },
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 200,
-      },
-    },
-  },
+  solidity: "0.8.18",
 };
